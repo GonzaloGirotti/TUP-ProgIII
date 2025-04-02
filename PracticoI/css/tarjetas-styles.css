@@ -7,15 +7,21 @@ body {
     height: auto;
     background-image: url(/imgs/nikefondo.jpg);
     background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    
 }
-
+@font-face{
+    font-family: "merienda";
+    src: url(/font/Merienda.ttf);
+}
 
 .contenedormain{
     display: grid;
     place-items: center;
     height: 100%;
     width: 100%;
-    margin-top: 80px}
+    margin-top: 80px;
+    font-family: 'merienda';
+}
 
 
 .contenedor {
