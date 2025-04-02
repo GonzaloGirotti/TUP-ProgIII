@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-image: url(/imgs/nikefondo.jpg);
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+}
+
+
+.contenedormain{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 80px}
+
+
+.contenedor {
+    display: flex;
+    gap: 15px; /* Espacio entre tarjetas */
+    max-width: 650px; /* Ancho máximo del contenedor */
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.contenedor1 {
+    display: flex;
+    gap: 15px; /* Espacio entre tarjetas */
+    max-width: 650px; /* Ancho máximo del contenedor */
+    margin: auto;
+}
+.tarjeta {
+    background-color: white;
+    width: 700px; /* Ancho fijo */
+    height: 200px; /* Altura fija */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
