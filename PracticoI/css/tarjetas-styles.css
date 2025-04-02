@@ -19,7 +19,7 @@ body {
     place-items: center;
     height: 100%;
     width: 100%;
-    margin-top: 80px;
+    margin-top: 45px;
     font-family: 'merienda';
 }
 
@@ -27,7 +27,7 @@ body {
 .contenedor {
     display: flex;
     gap: 15px; /* Espacio entre tarjetas */
-    max-width: 650px; /* Ancho máximo del contenedor */
+    max-width: 800px; /* Ancho máximo del contenedor */
     margin: auto;
     margin-bottom: 10px;
 }
@@ -35,17 +35,27 @@ body {
 .contenedor1 {
     display: flex;
     gap: 15px; /* Espacio entre tarjetas */
-    max-width: 650px; /* Ancho máximo del contenedor */
+    max-width: 800px; /* Ancho máximo del contenedor */
     margin: auto;
 }
 .tarjeta {
-    background-color: white;
-    width: 700px; /* Ancho fijo */
-    height: 200px; /* Altura fija */
+    background-color: rgb(243, 243, 243);
+    width: 200px; /* Ancho fijo */
+    height: 390px; /* Altura fija */
     padding: 15px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    border: 1px solid #ddd;
-}
+    border: 1px solid #000000;
+    display: flex;/* Convierte la tarjeta en un contenedor flexible */
+    flex-direction: column; /* Organiza los elementos en columna (imagen arriba, texto abajo) */
+    align-items: center;/* Alinea todos los elementos al centro */
+    justify-content: space-between; /* Distribuye los elementos uniformemente */
+    overflow: hidden; /* Evita que el contenido sobresalga */
 
+}
+.tarjeta img {
+    height: 200px; /* Mantiene todas las imágenes con la misma altura */
+    object-fit: contain; /* Evita cortes o deformaciones */
+    margin-top: auto; /* Empuja la imagen hacia abajo si hay menos texto */
+}
