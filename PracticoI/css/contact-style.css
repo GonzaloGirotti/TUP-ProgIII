@@ -1,0 +1,89 @@
+@font-face{
+    font-family: "merienda";
+    src: url(/font/Merienda.ttf)
+}
+
+body{
+    font-family: 'merienda';
+    font-weight: normal;
+    font-size: medium;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    background-image: url(/imgs/fondo-contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.tarea_comments{
+    height: 100px;
+    width: 60vw;
+}
+
+.text_inputs{
+    width: 60vw;
+    height: 40px;
+}
+
+#contact-title{
+    width: 100vw;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+}
+
+#form-div{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit-button{
+    width: 40vw;
+    height: 30px;
+}
+
+#button-container{
+    margin-top: 40px;
+    justify-content: center;
+    display: grid;
+}
+
+#comments-container{
+    align-items: center;
+    display: flex;
+}
+
+#comments-label{
+  margin-right: 5px;
+}
+
+footer{
+    display: grid;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+
+#footer-container{
+    width:fit-content;
+    height: fit-content;
+    display: grid;
+}
+
+#links-bar-container{
+    display:inline;
+    text-align: center;
+}
+
+.footer-link{
+    padding: 5px;
+    padding-bottom: 0;
+}
+
+.p-footer{
+    padding: 10px;
+}
