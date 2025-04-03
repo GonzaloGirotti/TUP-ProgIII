@@ -23,3 +23,44 @@
 .imagen:hover{
   transform: scale(1.2);
 }
+
+header{
+    background-color: transparent;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#header-nav{
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-item, #nike-img{
+    padding: 10px;
+}
+
+footer{
+    display: grid;
+    justify-content: center;
+}
+
+
+#footer-container{
+    width:fit-content;
+    height: auto;
+    display: grid;
+}
+
+#links-bar-container{
+    display:inline;
+    text-align: center;
+}
+
+.footer-link{
+    padding: 5px;
+    padding-bottom: 0;
+}
+
+.p-footer{
+    padding: 5px;
+}
