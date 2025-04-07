@@ -106,21 +106,6 @@ body{
   margin-right: 5px;
 }
 
-footer{
-    width: 100vw;
-    display: grid;
-    justify-content: center;
-    height: fit-content;
-}
-
-#footer-container{
-    display: block;
-    justify-content: center;
-    text-align: center;
-    height: 15vh;
-    padding-top: 5vh;
-}
-
 #links-container{
     display: inline;
 }
@@ -145,13 +130,49 @@ header{
 #p-copyright{
     margin: 0%;
     margin-top: 2%;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
 }
 
 .nav-item, #nike-img{
     padding: 10px;
+    margin: 3px;
+}
+
+.nav-item{
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
 }
 
 .footer-icon{
     height: 20px;
     width: 20px;
+}
+
+footer{
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    height: fit-content;
+}
+
+#footer-container{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    height: 15vh;
+    padding-top: 3vh;
+}
+
+.footer-link, .footer-icon{
+    padding: 5px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+}
+
+#p-copyright{
+    margin: 0%;
+    margin-top: 2%;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
 }

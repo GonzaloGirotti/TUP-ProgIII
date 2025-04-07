@@ -10,15 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 
 </head>
-<header style="background-color: transparent; border-bottom: 20px solid transparent; padding: 10px 0; text-align:center;">
-        <nav>
-            <a href="#" style="display: inline-block;">
-                <img src="imgs/nikelogo_PNG11.png" alt="Nike Logo" style="height: 50px;">
-            </a>
-        </nav>  
-    </header>
+<header>
+    <div id="header-nav-container">
+        <nav id="header-nav">
+            <a class="nav-item" href="/index.html">Home</a>
+            <a class="nav-item" href="/contact.html">Contacto</a>
+            <img id="nike-img" src="imgs/nikelogo_PNG11.png" alt="Nike Logo" style="height: 50px;">
+            <a class="nav-item" href="Imagenes.html">Galería</a>
+            <a class="nav-item" href="tarjetas.html">Nuestros productos</a>
+        </nav>
+    </div>
+</header>
 
-    <body style="background-image: url('imgs/photo-1521193089946-7aa29d1fe776.avif'); background-size: cover; background-repeat: no-repeat;">
+    <body style="font-family: 'Merienda'; background-image: url('imgs/photo-1521193089946-7aa29d1fe776.avif'); background-size: cover; background-repeat: no-repeat;">
 
     <div style="text-align: center;">
         <img src="imgs/chicagogif.avif" alt="chicagogif" style="width: 80vw; height:33.33vh; object-fit: cover; border-radius: 10px;">
@@ -33,15 +37,21 @@
         
     <h1></h1>
 
-    <footer style="position: fixed; bottom: 0; display: block; justify-content: center; width: 100vw; ">
-    <div class="footermarianito">
-        <a href="#">Ayuda</a>
-        <a href="#">Acerca de Nike</a>
-        <a href="#">Novedades</a>
-        <a href="#">Contacto</a>
-    </div>
-    <p class="copyright">&copy; 2025 Trabajo Practico Nro. "1". Home (Principal). Todos los derechos reservados.</p>
-</footer>
+    <footer>
+        <div id="footer-container">
+            <div id="links-container">
+                <a class="footer-link" href="#">Ayuda</a>
+                <img class="footer-icon" src="/imgs/help-ico.ico" alt="help-icon">
+                <a class="footer-link" href="#">Acerca de Nike</a>
+                <img class="footer-icon" src="/imgs/info.ico" alt="info-icon">
+                <a class="footer-link" href="#">Novedades</a>
+                <img class="footer-icon" src="/imgs/news-ico.ico" alt="news-icon">
+            </div>
+            <div id="copyright-paragraph">
+                <p id="p-copyright">&copy; 2025 Trabajo Practico Nro. 1. Home (Principal). Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 

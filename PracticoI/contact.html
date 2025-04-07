@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/contact-style.css">
     <title>Contact</title>
 </head>
+
 <body>
     <header>
         <div id="header-nav-container">
@@ -13,127 +14,103 @@
                 <a class="nav-item" href="/index.html">Home</a>
                 <a class="nav-item" href="/contact.html">Contacto</a>
                 <img id="nike-img" src="imgs/nikelogo_PNG11.png" alt="Nike Logo" style="height: 50px;">
-                <a class="nav-item" href="">Galería</a>
-                <a class="nav-item" href="">Nuestros productos</a>
+                <a class="nav-item" href="Imagenes.html">Galería</a>
+                <a class="nav-item" href="tarjetas.html">Nuestros productos</a>
             </nav>
         </div>
     </header>
 
+    <div id="title-form-container">
+        <div id="contact-title-container">
+            <h1 id="contact-title">Contactanos</h1>
+        </div>
 
-
-
-
-
-
-<div id="title-form-container">
-    
-    
-    
-    
-    <div id="contact-title-container">
-        <h1 id="contact-title">Contactanos</h1>
-    </div>
-
-    <div id="form-div">
-        <form action="" method="POST">
-            <div class="form-element-container">
-                <label for="name" class="label_tinputs">Nombre: </label>
-                <input id="name" name="name" class="text_inputs" type="text" placeholder="Juancito" required>
-            </div>
-
-            <!-- <br> -->
-
-            <div class="form-element-container">
-                <label for="surname" class="label_tinputs">Apellido: </label>
-                <input id="surname" name="surname" class="text_inputs" type="text" placeholder="Perez" required>
-            </div>
-
-            <!-- <br> -->
-
-            <div id="comments-container" class="form-element-container">
-                <label id="comments-label" for="comments" class="label_tArea">Comentarios: </label>
-                <textarea name="comments" id="comments" class="tarea_comments" placeholder="Me gustan las zapas!!"></textarea>
-            </div>
-
-            <!-- <br> -->
-
-            <div class="form-element-container">
-                <label for="email" class="label_tinputs">E-Mail: </label>
-                <input id="email" name="email" class="text_inputs" type="email" placeholder="JPerez@gmail.com" required>
-            </div>
-
-            <div class="form-element-container" id="country-gender-container">
-                <label for="" id="gender-label">Género:</label>
-                <div id="gender-selection-container">
-                    <input type="radio" id="masculine" name="gender-selection">
-                    <label name="gender-selection" for="masculine" class="radio-button-label">Masculino </label>
-                    <input type="radio" id="femenine" name="gender-selection">
-                    <label name="gender-selection" for="femenine" class="radio-button-label">Femenino </label>
+        <div id="form-div">
+            <form action="" method="POST">
+                <div class="form-element-container">
+                    <label for="name" class="label_tinputs">Nombre: </label>
+                    <input id="name" name="name" class="text_inputs" type="text" placeholder="Juancito" required>
                 </div>
 
-                <div id="selection-containers-spacer"></div>
+                <!-- <br> -->
 
-                <div id="country-selection-container">
-                    <label for="pais">País:</label>
-                    <select id="pais" name="pais">
-                    <option value="ar">Argentina</option>
-                    <option value="us">EEUU</option>
-                    <option value="uy">Uruguay</option>
-                    <option value="br">Brasil</option>
-                    <option value="ch">Chile</option>
-                    <option value="pa">Paraguay</option>
-                    </select>
+                <div class="form-element-container">
+                    <label for="surname" class="label_tinputs">Apellido: </label>
+                    <input id="surname" name="surname" class="text_inputs" type="text" placeholder="Perez" required>
                 </div>
-            </div>
 
-            <!-- <br> -->
+                <!-- <br> -->
 
-            <div id="last-form-element-container" class="form-element-container">
-                <label for="phone" class="label_tinputs">Telefono: </label>
-                <input id="phone" name="phone" class="text_inputs" type="number" placeholder="2914567890" required>
-            </div>
+                <div id="comments-container" class="form-element-container">
+                    <label id="comments-label" for="comments" class="label_tArea">Comentarios: </label>
+                    <textarea name="comments" id="comments" class="tarea_comments" placeholder="Me gustan las zapas!!"></textarea>
+                </div>
 
-            <br>
-        
-            <div id="buttons-container">
-                <button id="submit-button" type="sumbit">Enviar formulario</button>
-                <button id="reset-button" type="reset">Resetear los campos</button>
-            </div>
+                <!-- <br> -->
+
+                <div class="form-element-container">
+                    <label for="email" class="label_tinputs">E-Mail: </label>
+                    <input id="email" name="email" class="text_inputs" type="email" placeholder="JPerez@gmail.com" required>
+                </div>
+
+                <div class="form-element-container" id="country-gender-container">
+                    <label for="" id="gender-label">Género:</label>
+                    <div id="gender-selection-container">
+                        <input type="radio" id="masculine" name="gender-selection">
+                        <label name="gender-selection" for="masculine" class="radio-button-label">Masculino </label>
+                        <input type="radio" id="femenine" name="gender-selection">
+                        <label name="gender-selection" for="femenine" class="radio-button-label">Femenino </label>
+                    </div>
+
+                    <div id="selection-containers-spacer"></div>
+
+                    <div id="country-selection-container">
+                        <label for="pais">País:</label>
+                        <select id="pais" name="pais">
+                        <option value="ar">Argentina</option>
+                        <option value="us">EEUU</option>
+                        <option value="uy">Uruguay</option>
+                        <option value="br">Brasil</option>
+                        <option value="ch">Chile</option>
+                        <option value="pa">Paraguay</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- <br> -->
+
+                <div id="last-form-element-container" class="form-element-container">
+                    <label for="phone" class="label_tinputs">Telefono: </label>
+                    <input id="phone" name="phone" class="text_inputs" type="number" placeholder="2914567890" required>
+                </div>
+
+                <br>
             
-        </form>
+                <div id="buttons-container">
+                    <button id="submit-button" type="sumbit">Enviar formulario</button>
+                    <button id="reset-button" type="reset">Resetear los campos</button>
+                </div>
+                
+            </form>
+        </div>
     </div>
 
 
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-        <footer>
-            <div id="footer-container">
-                <div id="links-container">
-                    <a class="footer-link" href="#">Ayuda</a>
-                    <img class="footer-icon" src="/imgs/help-ico.ico" alt="help-icon">
-                    <a class="footer-link" href="#">Acerca de Nike</a>
-                    <img class="footer-icon" src="/imgs/info.ico" alt="info-icon">
-                    <a class="footer-link" href="#">Novedades</a>
-                    <img class="footer-icon" src="/imgs/news-ico.ico" alt="news-icon">
-                </div>
-                <div id="copyright-paragraph">
-                    <p id="p-copyright">&copy; 2025 Trabajo Practico Nro. 1. Home (Principal). Todos los derechos reservados.</p>
-                </div>
+    <footer>
+        <div id="footer-container">
+            <div id="links-container">
+                <a class="footer-link" href="#">Ayuda</a>
+                <img class="footer-icon" src="/imgs/help-ico.ico" alt="help-icon">
+                <a class="footer-link" href="#">Acerca de Nike</a>
+                <img class="footer-icon" src="/imgs/info.ico" alt="info-icon">
+                <a class="footer-link" href="#">Novedades</a>
+                <img class="footer-icon" src="/imgs/news-ico.ico" alt="news-icon">
             </div>
-        </footer>
-
-</footer>
+            <div id="copyright-paragraph">
+                <p id="p-copyright">&copy; 2025 Trabajo Practico Nro. 1. Home (Principal). Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 

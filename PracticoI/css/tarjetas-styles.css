@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Merienda';
     background-color: #f4f4f4;
     display: grid;
     justify-content: center;
@@ -20,7 +20,6 @@ body {
     height: 100%;
     width: 100%;
     margin-top: 45px;
-    font-family: 'merienda';
 }
 
 
@@ -78,11 +77,6 @@ footer{
     text-align: center;
 }
 
-.footer-link{
-    padding: 5px;
-    padding-bottom: 0;
-}
-
 .p-footer{
     padding: 5px;
 }
@@ -100,4 +94,47 @@ header{
 
 .nav-item, #nike-img{
     padding: 10px;
+    margin: 3px;
+}
+
+.nav-item{
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+}
+
+.footer-icon{
+    height: 20px;
+    width: 20px;
+}
+
+footer{
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    height: fit-content;
+}
+
+#footer-container{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    height: 15vh;
+    padding-top: 5vh;
+}
+
+#links-container{
+    display: inline;
+}
+
+.footer-link, .footer-icon{
+    padding: 5px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+}
+
+#p-copyright{
+    margin: 0%;
+    margin-top: 2%;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
 }
