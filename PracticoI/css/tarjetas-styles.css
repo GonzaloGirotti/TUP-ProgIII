@@ -1,0 +1,140 @@
+body {
+    font-family: 'Merienda';
+    background-color: #f4f4f4;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-image: url(/imgs/nikefondo.jpg);
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    
+}
+@font-face{
+    font-family: "merienda";
+    src: url(/font/Merienda.ttf);
+}
+
+.contenedormain{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 45px;
+}
+
+
+.contenedor {
+    display: flex;
+    gap: 15px; /* Espacio entre tarjetas */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.contenedor1 {
+    display: flex;
+    gap: 15px; /* Espacio entre tarjetas */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: auto;
+}
+.tarjeta {
+    background-color: rgb(243, 243, 243);
+    width: 200px; /* Ancho fijo */
+    height: 390px; /* Altura fija */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #000000;
+    display: flex;/* Convierte la tarjeta en un contenedor flexible */
+    flex-direction: column; /* Organiza los elementos en columna (imagen arriba, texto abajo) */
+    align-items: center;/* Alinea todos los elementos al centro */
+    justify-content: space-between; /* Distribuye los elementos uniformemente */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+
+}
+.tarjeta img {
+    height: 200px; /* Mantiene todas las imágenes con la misma altura */
+    object-fit: contain; /* Evita cortes o deformaciones */
+    margin-top: auto; /* Empuja la imagen hacia abajo si hay menos texto */
+}
+
+/*FOOTER*/
+footer{
+    display: grid;
+    justify-content: center;
+}
+
+
+#footer-container{
+    width:fit-content;
+    height: auto;
+    display: grid;
+}
+
+#links-bar-container{
+    display:inline;
+    text-align: center;
+}
+
+.p-footer{
+    padding: 5px;
+}
+/* header*/
+header{
+    background-color: transparent;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#header-nav{
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-item, #nike-img{
+    padding: 10px;
+    margin: 3px;
+}
+
+.nav-item{
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+}
+
+.footer-icon{
+    height: 20px;
+    width: 20px;
+}
+
+footer{
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    height: fit-content;
+}
+
+#footer-container{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    height: 15vh;
+    padding-top: 5vh;
+}
+
+#links-container{
+    display: inline;
+}
+
+.footer-link, .footer-icon{
+    padding: 5px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+}
+
+#p-copyright{
+    margin: 0%;
+    margin-top: 2%;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+}

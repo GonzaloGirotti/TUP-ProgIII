@@ -1,0 +1,178 @@
+/* NOTAS: */
+
+/* @font-face: Define una nueva fuente. Elijo una descargada para ser utilizada 
+globalmente en el archivo CSS. */
+
+/* "vh" y "vw": Viewport Height y Width (respectivamente) aluden al 
+    ancho y alto del total visible de la página.*/
+
+
+@font-face{
+    font-family: "merienda";
+    src: url(/font/Merienda.ttf)
+}
+
+body{
+    font-family: 'merienda';
+    font-weight: normal;
+    font-size: medium;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /*Evita el scroll, ocultando automáticamente 
+                        sobresalga del body.*/
+    display: grid;
+    align-items: center;
+    background-image: url(/imgs/fondo-contacto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#title-form-container{
+    width: 100vw;
+    height: 70vh;
+    display: grid;
+    align-items: center;
+}
+
+.tarea_comments{
+    height: 100px;
+    width: 60vw;
+}
+
+.text_inputs{
+    width: 60vw;
+    height: 4vh;
+}
+
+.form-element-container, #country-gender-container{
+    padding-bottom: 1vh;
+}
+
+#country-gender-container{
+    display: inline-flex;
+    justify-content: center;
+    width:100%;
+}
+
+#gender-label{
+    margin-left: 5px;
+}
+
+#selection-containers-spacer{
+    width: 10%;
+}
+
+#last-form-element-container{
+    padding: 0;
+}
+
+#contact-title-container{
+    width: 100vw;
+    text-align: center;
+}
+
+#contact-title{
+    margin: 0;
+}
+
+#form-div{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit-button, #reset-button{
+    width: 20vw;
+    height: 4vh;
+    margin: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: bisque;
+}
+
+#buttons-container{
+    justify-content: center;
+    display: flex;
+}
+
+#comments-container{
+    align-items: center;
+    display: flex;
+}
+
+#comments-label{
+  margin-right: 5px;
+}
+
+#links-container{
+    display: inline;
+}
+
+header{
+    background-color: transparent;
+    text-align: center;
+    height: fit-content;
+}
+
+#header-nav-container{
+    width: 100vw;
+    height: 15vh;
+
+}
+
+#header-nav{
+    display: inline-flex;
+    align-items: center;
+}
+
+#p-copyright{
+    margin: 0%;
+    margin-top: 2%;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+}
+
+.nav-item, #nike-img{
+    padding: 10px;
+    margin: 3px;
+}
+
+.nav-item{
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+}
+
+.footer-icon{
+    height: 20px;
+    width: 20px;
+}
+
+footer{
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    height: fit-content;
+}
+
+#footer-container{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    height: 15vh;
+    padding-top: 3vh;
+}
+
+.footer-link, .footer-icon{
+    padding: 5px;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+}
+
+#p-copyright{
+    margin: 0%;
+    margin-top: 2%;
+    background-color: rgb(189, 189, 189);
+    border-radius: 20px;
+}
