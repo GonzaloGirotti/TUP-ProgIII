@@ -1,0 +1,37 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-container{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-label{
+    margin-right: 2em;
+    font-size: 1.2em;
+}
+
+#adding-button{
+    background-color: rgb(255, 220, 82);
+    border-radius: 20%;
+    border: 2px solid black;
+    margin-top: 2vh;
+    font-size: 1.1em;
+    height: 5vh;
+    width: 15vw;
+}
+
+#list{
+    width: 15vw;
+    list-style-type: georgian;
+}
+
