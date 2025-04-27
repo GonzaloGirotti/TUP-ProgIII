@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJ5</title>
+</head>
+
+<body>
+    <h2>Formulario de contacto</h2>
+    <form id="formulario">
+        <label for="nombre">Nombre :</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <div class="error" id="error-nombre"></div><br>
+
+        <label for="edad">Edad :</label><br>
+        <input type="number" id="edad" name="edad"><br>
+        <div class="error" id="error-edad"></div><br>
+
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" name="email"><br>
+        <div class="error" id="error-email"></div><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            document.getElementById('error-nombre').textContent = '';
+            document.getElementById('error-edad').textContent = '';
+            document.getElementById('error-email').textContent = '';
+
+            let nombre = document.getElementById('nombre').value;
+            let edad = document.getElementById('edad').value;
+            let email = document.getElementById('email').value;
+            let valido = true;
+
+            if (nombre === '') {
+                document.getElementById('error-nombre').textContent = 'Completa el nombre';
+                valido = false;
+            }
+
+            if (edad === '' || Number(edad) <= 18) {
+                document.getElementById('error-edad').textContent = 'Debes tener más de 18 años';
+                valido = false;
+            }
+
+            if (email === '' || !email.includes('@') || !email.includes('.')) {
+                document.getElementById('error-email').textContent = 'Email no válido';
+                valido = false;
+            }
+
+            if (valido) {
+                alert('Formulario válido!');
+                
+            }
+        });
+    </script>
+
+
+
+</body>
+
+
+
+
+</html>

@@ -6,9 +6,15 @@ body {
     align-items: center;
     height: auto;
     background-image: url(/imgs/nikefondo.jpg);
-    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-size: cover;
+    background-position: center;
+    
+    
     
 }
+
+
+
 @font-face{
     font-family: "merienda";
     src: url(/font/Merienda.ttf);
@@ -85,6 +91,7 @@ header{
     background-color: transparent;
     padding: 10px 0;
     text-align: center;
+
 }
 
 #header-nav{
