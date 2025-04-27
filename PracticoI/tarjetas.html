@@ -10,13 +10,15 @@
 <body>
     <!-- NAV-->
     <header>
-        <nav id="header-nav">
-            <a class="nav-item" href="/index.html">Home</a>
-            <a class="nav-item" href="/contact.html">Contacto</a>
-            <img id="nike-img" src="imgs/nikelogo_PNG11.png" alt="Nike Logo" style="height: 50px;">
-            <a class="nav-item" href="">Galería</a>
-            <a class="nav-item" href="">Nuestros productos</a>
-        </nav>
+        <div id="header-nav-container">
+            <nav id="header-nav">
+                <a class="nav-item" href="/index.html">Home</a>
+                <a class="nav-item" href="/contact.html">Contacto</a>
+                <img id="nike-img" src="imgs/nikelogo_PNG11.png" alt="Nike Logo" style="height: 50px;">
+                <a class="nav-item" href="Imagenes.html">Galería</a>
+                <a class="nav-item" href="tarjetas.html">Nuestros productos</a>
+            </nav>
+        </div>
     </header>
     
     <!-- TARJETAS--> 
@@ -69,14 +71,17 @@
         <!--FOOTER-->
         <footer>
             <div id="footer-container">
-                <div id="links-bar-container">
+                <div id="links-container">
                     <a class="footer-link" href="#">Ayuda</a>
+                    <img class="footer-icon" src="/imgs/help-ico.ico" alt="help-icon">
                     <a class="footer-link" href="#">Acerca de Nike</a>
+                    <img class="footer-icon" src="/imgs/info.ico" alt="info-icon">
                     <a class="footer-link" href="#">Novedades</a>
-                    <a class="footer-link" href="#">Contacto</a>
+                    <img class="footer-icon" src="/imgs/news-ico.ico" alt="news-icon">
                 </div>
-                <br>
-                    <p class="copyright">&copy; 2025 Trabajo Practico Nro. 1. Tarjetas (Principal). Todos los derechos reservados.</p>
+                <div id="copyright-paragraph">
+                    <p id="p-copyright">&copy; 2025 Trabajo Practico Nro. 1. Home (Principal). Todos los derechos reservados.</p>
+                </div>
             </div>
         </footer>
 
