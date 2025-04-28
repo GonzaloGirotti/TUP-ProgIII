@@ -22,13 +22,13 @@
         <input type="email" id="email" name="email"><br>
         <div class="error" id="error-email"></div><br>
 
-        <button type="submit">Enviar</button>
+        <button id ="boton-enviar" type="submit">Enviar</button>
     </form>
 
 
 
     <script>
-        document.getElementById('formulario').addEventListener('submit', function (e) {
+        document.getElementById('boton-enviar').addEventListener("click", function (e) {
             e.preventDefault();
 
             document.getElementById('error-nombre').textContent = '';
@@ -38,6 +38,7 @@
             let nombre = document.getElementById('nombre').value;
             let edad = document.getElementById('edad').value;
             let email = document.getElementById('email').value;
+            let emailregex = /.[^@]+@{1}.[^@]+\.{1}(com)/;
             let valido = true;
 
             if (nombre === '') {
@@ -50,8 +51,11 @@
                 valido = false;
             }
 
-            if (email === '' || !email.includes('@') || !email.includes('.')) {
-                document.getElementById('error-email').textContent = 'Email no válido';
+            if (email === "") {
+                document.getElementById('error-email').textContent = 'El e-mail es necesario';
+                valido = false;
+            } else if (!email.includes('@') || !email.includes('.') || !emailregex.test(email)) {
+                document.getElementById('error-email').textContent = 'El e-mail es invalido';
                 valido = false;
             }
 
