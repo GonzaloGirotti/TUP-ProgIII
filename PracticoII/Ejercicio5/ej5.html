@@ -40,7 +40,7 @@
             let nombre = document.getElementById('nombre').value;
             let edad = document.getElementById('edad').value;
             let email = document.getElementById('email').value;
-            let emailregex = /.[^@]+@{1}.[^@]+\.{1}(com)/;
+            let emailkys = /.[^@]+@{1}.[^@]+\.{1}(com)/;
             let valido = true;
 
             if (nombre === '') {
@@ -56,7 +56,7 @@
             if (email === "") {
                 document.getElementById('error-email').textContent = 'El e-mail es necesario';
                 valido = false;
-            } else if (!email.includes('@') || !email.includes('.') || !emailregex.test(email)) {
+            } else if (!email.includes('@') || !email.includes('.') || !emailkys.test(email)) {
                 document.getElementById('error-email').textContent = 'El e-mail es invalido';
                 valido = false;
             }
