@@ -22,12 +22,14 @@
         <input type="email" id="email" name="email"><br>
         <div class="error" id="error-email"></div><br>
 
-        <button id ="boton-enviar" type="submit">Enviar</button>
+        <button id="boton-enviar" type="submit">Enviar</button>
     </form>
 
 
 
     <script>
+        const formulario = document.getElementById('formulario'); 
+
         document.getElementById('boton-enviar').addEventListener("click", function (e) {
             e.preventDefault();
 
@@ -61,7 +63,7 @@
 
             if (valido) {
                 alert('Formulario válido!');
-                formulario.submit();
+                formulario.submit(); 
             }
         });
     </script>
