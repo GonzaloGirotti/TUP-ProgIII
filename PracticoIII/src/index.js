@@ -4,6 +4,8 @@ const routerConfig = require('./routes/index_routes') //Import de Configuracion 
 const errorHandler = require('./middlewares/error') //Import de las constantes de errores de peticion
 let createError = require('http-errors')
 const database = require('./database/config/db')
+const  dotenv = require('dotenv');
+const path = require('path')
 
 const configuracionMiddlewares = (app) => {
     app.use(express.json()) //puede recibir json
@@ -21,13 +23,27 @@ const configuracionRouter = (app) => {
     app.use(errorHandler)
 }
 
-const init = () => {
-    const app = express() //instanciamos express
-    configuracionMiddlewares(app) //configurar los middlewares
-    configuracionRouter(app) // Configura las rutas
-    database.connectDB() //Conecta a la DB
+  const engine = (app, template) => {
+     try{
+       require.resolve(template);
+       app.set('view engine', template)
+       app.set('views', './src/views/')
+     } catch (error) {
+        console.log('Error al configurar el motor de plantillas:',template)
+      }
+  }
 
-    app.listen(globalConstants.PORT) //Escucha en el puerto definido en las variables
+
+const init = () => {
+    const app = express() // instanciamos express
+    configuracionMiddlewares(app) // configurar los middlewares
+    database.connectDB() // conecta a la DB
+
+    engine(app, process.env.TEMPLATE) // configurar el motor de plantillas
+
+    configuracionRouter(app) // configurar rutas
+
+    app.listen(globalConstants.PORT)
     console.log(`La app se ejecuta en el puerto: ${globalConstants.PORT}`)
 }
 

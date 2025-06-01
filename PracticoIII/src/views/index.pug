@@ -1,0 +1,26 @@
+doctype html
+html(lang="es")
+    head
+        title= title
+        meta(charset="utf-8")
+        
+    include ./styles/index_styles.pug
+
+    body
+
+    div.mainContainer
+        h1= message
+        h2 Elija una opción:
+        ul.menu
+            li
+                button 
+                    a(href="/api/v1/home/login") Iniciar sesión
+            li
+                button
+                    a(href="/api/v1/home/register") Registrarse
+            li
+                button
+                    a(href="/api/v1/home/listarPacientes") Ver Pacientes
+        
+        footer
+            p © #{new Date().getFullYear()} Programacion III
