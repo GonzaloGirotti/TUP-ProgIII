@@ -3,8 +3,10 @@ html(lang="es")
     head
         title= title
         meta(charset="utf-8")
-        
-    include ./styles/pacientes_styles.pug
+
+    //- Estilos
+    include ./styles/base_styles.pug
+    include ./styles/pacientes_styles.pug 
 
     body
 
@@ -12,8 +14,12 @@ html(lang="es")
         h1= message
         h2 Pacientes actuales:
 
+        //- Lista de pacientes, muestra una tarjeta por cada paciente
+        if pacientes.length === 0
+            p No hay pacientes registrados.
+        else
         div.listaPacientes
-            each paciente in pacientes
+            each paciente in pacientes 
                 div.pacienteCard
                     tr
                         td ID: #{paciente.id}
@@ -25,6 +31,13 @@ html(lang="es")
                         td Edad: #{paciente.edad}
                         br
                         td Email: #{paciente.email}
+                        br
+                        td
+                            button
+                                a(href=`${ruta_modificar}${paciente.id}`) Editar
+                            button 
+                                a(href=`${ruta_eliminar}${paciente.id}`) Eliminar
+
                  
 
         footer

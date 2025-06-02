@@ -1,7 +1,5 @@
 'use strict'
 
-const { allow } = require("joi")
-
 module.exports = (sequelize, DataTypes) => {
 
     let Usuario = sequelize.define('usuario', {

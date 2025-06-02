@@ -1,9 +1,8 @@
 const { Router } = require('express')
-const usuarioRoutes = require('../routes/usuarios_routes')
-const medicosRoutes = require('../routes/medicos_routes')
-const pacientesRoutes = require('../routes/pacientes_routes')
-const authRoutes = require('../routes/auth_routes')
-const homeRoutes = require('../routes/home_routes')
+const medicosRoutes = require('../routes/online_routes/medicos_routes')
+const pacientesRoutes = require('../routes/online_routes/pacientes_routes')
+const authRoutes = require('../routes/online_routes/auth_routes')
+const homeRoutes = require('../routes/local_routes/home_routes')
 
 const decodeJWT = require('../middlewares/decodeJWT')
 
@@ -11,9 +10,8 @@ const decodeJWT = require('../middlewares/decodeJWT')
 const rutas_init = () => {
     const router = Router()
 
-    router.use("/usuarios", decodeJWT, usuarioRoutes)
     router.use("/medicos", decodeJWT, medicosRoutes)
-    router.use("/pacientes", decodeJWT, pacientesRoutes)
+    router.use("/pacientes", pacientesRoutes)
     router.use("/home", homeRoutes)
 
     return router

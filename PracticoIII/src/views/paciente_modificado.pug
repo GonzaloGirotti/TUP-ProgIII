@@ -1,0 +1,32 @@
+doctype html
+html(lang="es")
+    head
+        title= title
+        meta(charset="utf-8")
+
+    //- Estilos
+    include ./styles/base_styles.pug
+    include ./styles/paciente_modificado_styles.pug 
+
+    body
+
+    div.mainContainer
+        h1= message
+        h2.pacienteCard
+            | Nuevos datos:
+            br
+            | ID: #{paciente.id}
+            br
+            | Nombre: #{paciente.nombre}
+            br
+            | Apellido: #{paciente.apellido}
+            br
+            | Edad: #{paciente.edad}
+            br
+            | Email: #{paciente.email}
+        button 
+            a(href=`${ruta_pacientes}`) Volver a la lista de pacientes
+                 
+
+        footer
+            p © #{new Date().getFullYear()} Programacion III

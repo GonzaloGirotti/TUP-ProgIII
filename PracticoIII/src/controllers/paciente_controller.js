@@ -49,15 +49,22 @@ module.exports = {
         })
     },
 
-    prueba: async (req, res) => {
-        try {
-            console.log("Ejecutando prueba")
+    modificar: async (req, res, next) => {
+        const patient = await models.paciente.findOne({
+            where: {
+                id: req.params.idPaciente
+            }
+        })
 
-            res.json({
-                message: "Hola mundo!"
-            })
-        }catch(err) {
-            console.log(err)
-        }
+        if(!patient) return next(errorsConstants.PacienteInexistente)
+
+        await patient.update(req.body)
+
+        res.json({
+            success: true,
+            data: {
+                paciente: patient
+            }
+        })
     }
 }

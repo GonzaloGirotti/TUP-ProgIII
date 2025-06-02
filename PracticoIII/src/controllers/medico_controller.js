@@ -39,17 +39,5 @@ module.exports = {
                 medico: medic
             }
         })
-    },
-
-    prueba: async (req, res) => {
-        try {
-            console.log("Ejecutando prueba")
-
-            res.json({
-                message: "Hola mundo!"
-            })
-        }catch(err) {
-            console.log(err)
-        }
     }
 }

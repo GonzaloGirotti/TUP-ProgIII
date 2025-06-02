@@ -1,0 +1,38 @@
+doctype html
+html(lang="es")
+    head
+        title= title
+        meta(charset="utf-8")
+
+    //- Estilos
+    include ./styles/base_styles.pug
+    include ./styles/modificar_paciente_styles.pug 
+
+    body
+
+    div.mainContainer
+        h1= message
+        form(action=form_action, method="POST")
+            h2.pacienteCard
+                | Nuevos datos:
+                br
+                | ID: #{paciente.id}
+                br
+                | Nombre: 
+                input(type="text", name="nombre", value=paciente.nombre, required)
+                br
+                | Apellido: 
+                input(type="text", name="apellido", value=paciente.apellido, required)
+                br
+                | Edad: 
+                input(type="number", name="edad", value=paciente.edad, required)
+                br
+                | Email: 
+                input(type="email", name="email", value=paciente.email, required)
+            button(type="submit") Actualizar Paciente
+        button
+            a(href=`${ruta_pacientes}`) Volver a la lista de pacientes
+                 
+
+        footer
+            p © #{new Date().getFullYear()} Programacion III
