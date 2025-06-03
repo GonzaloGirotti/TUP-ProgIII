@@ -1,0 +1,17 @@
+doctype html
+html(lang="es")
+    head
+        title= title
+        meta(charset="utf-8")
+        
+    include ./styles/base_styles.pug
+
+    body
+
+    div.mainContainer
+        h1= message
+        button.volverButton
+            a(href="/api/v1/home") Volver al inicio
+        
+        footer
+            p © #{new Date().getFullYear()} Programacion III

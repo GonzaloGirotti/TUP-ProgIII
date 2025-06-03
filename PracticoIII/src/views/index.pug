@@ -15,13 +15,13 @@ html(lang="es")
         ul.menu
             li
                 button 
-                    a(href="/api/v1/home/login") Iniciar sesión
+                    a(href="/api/v1/home/loginUsuario") Iniciar sesión
             li
                 button
-                    a(href="/api/v1/home/register") Registrarse
+                    a(href=paginaRegistroTurno) Registrar Turno
             li
                 button
-                    a(href="/api/v1/home/listarPacientes") Ver Pacientes
+                    a(href=paginaListarPacientes) Ver Pacientes
         
         footer
             p © #{new Date().getFullYear()} Programacion III

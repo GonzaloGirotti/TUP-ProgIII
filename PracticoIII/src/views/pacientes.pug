@@ -17,6 +17,8 @@ html(lang="es")
         //- Lista de pacientes, muestra una tarjeta por cada paciente
         if pacientes.length === 0
             p No hay pacientes registrados.
+            button
+                a(href="/api/v1/home") Volver al inicio
         else
         div.listaPacientes
             each paciente in pacientes 
@@ -35,10 +37,37 @@ html(lang="es")
                         td
                             button
                                 a(href=`${ruta_modificar}${paciente.id}`) Editar
-                            button 
-                                a(href=`${ruta_eliminar}${paciente.id}`) Eliminar
+                                button(onclick=`eliminarPaciente(${paciente.id})`) Eliminar
+                    
+        button.volverButton
+            a(href="/api/v1/home") Volver al inicio
 
                  
 
         footer
             p © #{new Date().getFullYear()} Programacion III
+        
+        script.
+            function eliminarPaciente(id) {
+                //- muestra un mensaje de confirmación antes de eliminar
+                if (confirm('¿Estás seguro de que quieres eliminar este paciente?')) {
+                    //- hace una peticion DELETE a la API para eliminar el paciente
+                    //- y recarga la página si la eliminación es exitosa
+                    fetch(`/api/v1/home/eliminarPaciente/${id}`, {
+                        method: 'DELETE'
+                    })
+                    .then(res => {
+                        if (res.ok) {
+                            window.location.reload();
+                        } else {
+                            return res.json().then(data => {
+                                alert('Error: ' + (data.error?.message || 'No se pudo eliminar'));
+                            });
+                        }
+                    })
+                    .catch(err => {
+                        alert('Error de red');
+                        console.error(err);
+                    });
+                }
+            }

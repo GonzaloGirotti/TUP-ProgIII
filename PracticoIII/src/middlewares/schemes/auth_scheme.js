@@ -6,11 +6,9 @@ let login = Joi.object({
 })
 
 let registrarse = Joi.object({
-    nombre: Joi.string().required(),
-    apellido: Joi.string().required(),
-    email: Joi.string().required(),
-    password: Joi.string().required(),
-    edad: Joi.number().required()
+    nombre_usuario: Joi.string().required(),
+    email: Joi.string().required().email(),
+    password: Joi.string().required()
 })
 
-module.exports = {login}
+module.exports = {login, registrarse}

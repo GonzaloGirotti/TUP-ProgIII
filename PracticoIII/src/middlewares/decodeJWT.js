@@ -24,7 +24,7 @@ module.exports = async function (req, res, next) {
                     id: dataToken.id
                 }
             })
-            if(!usuario) return next(errorsConstants,UsuarioNoAutorizado)
+            if(!usuario) return next(errorsConstants.UsuarioNoAutorizado)
 
             res.locals.usuario = usuario
             //Me guardo el usuario en el locals para usarlo en las rutas que necesiten al usuario

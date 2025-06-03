@@ -8,7 +8,15 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true,
             allowNull: false
-        }
+        },
+        fecha: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
+        hora: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
     }, {
         timestamps: true,
         underscored: true,

@@ -1,0 +1,60 @@
+doctype html
+html(lang="es")
+    head
+        title= title
+        meta(charset="utf-8")
+
+    //- Estilos
+    include ./styles/base_styles.pug
+    include ./styles/registro_styles.pug 
+
+    body
+
+    div.mainContainer
+        h1= message
+
+        div.pacientes-container
+            h2 Pacientes Registrados
+            each paciente in pacientes
+                div.paciente-card
+                    p ID: #{paciente.id}
+                    p Nombre: #{paciente.nombre}
+                    p Apellido: #{paciente.apellido}
+                    p Email: #{paciente.email}
+                    p Edad: #{paciente.edad}
+
+        div.medicos-container
+            h2 Medicos Disponibles
+            each medico in medicos
+                div.medico-card
+                    p ID: #{medico.id}
+                    p Nombre: #{medico.nombre}
+                    p Apellido: #{medico.apellido}
+                    p Email: #{medico.email}
+                    p Edad: #{medico.edad}
+                    p Especialidad: #{medico.especialidad}
+                    p Hospital: #{medico.hospital}
+
+
+        div.formContainer
+            form(action=form_action, method="POST")
+                | ID_PACIENTE: 
+                input(type="number", name="paciente_id", required)
+                br
+                | ID_MEDICO: 
+                input(type="number", name="medico_id", required)
+                br
+                | Fecha: 
+                input(type="date", name="fecha", required)
+                br
+                | Hora:
+                input(type="time", name="hora", required)
+                br
+                input(type="submit", value="Registrar Turno")
+            button.volverButton
+                a(href="/api/v1/home") Volver al inicio    
+
+
+                 
+        footer
+            p © #{new Date().getFullYear()} Programacion III

@@ -3,6 +3,7 @@ const medicosRoutes = require('../routes/online_routes/medicos_routes')
 const pacientesRoutes = require('../routes/online_routes/pacientes_routes')
 const authRoutes = require('../routes/online_routes/auth_routes')
 const homeRoutes = require('../routes/local_routes/home_routes')
+const turnosRoutes = require('../routes/online_routes/turnos_routes')
 
 const decodeJWT = require('../middlewares/decodeJWT')
 
@@ -13,6 +14,7 @@ const rutas_init = () => {
     router.use("/medicos", decodeJWT, medicosRoutes)
     router.use("/pacientes", pacientesRoutes)
     router.use("/home", homeRoutes)
+    router.use("/turnos", turnosRoutes)
 
     return router
 }

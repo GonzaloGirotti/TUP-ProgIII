@@ -29,8 +29,9 @@ html(lang="es")
                 br
                 | Email: 
                 input(type="email", name="email", value=paciente.email, required)
-            button(type="submit") Actualizar Paciente
-        button
+                button(type="submit").actualizarButton Actualizar Paciente
+                br
+        button.volverButton
             a(href=`${ruta_pacientes}`) Volver a la lista de pacientes
                  
 

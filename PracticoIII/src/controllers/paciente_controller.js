@@ -66,5 +66,22 @@ module.exports = {
                 paciente: patient
             }
         })
+    },
+
+    eliminar: async (req, res, next) => {
+        const patient = await models.paciente.findOne({
+            where: {
+                id: req.params.idPaciente
+            }
+        })
+
+        if(!patient) return next(errorsConstants.PacienteInexistente)
+
+        await patient.destroy()
+
+        res.json({
+            success: true,
+            message: 'Paciente eliminado correctamente'
+        })
     }
 }
