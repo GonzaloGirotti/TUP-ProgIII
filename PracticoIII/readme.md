@@ -22,17 +22,17 @@ Este proyecto es una API desarrollada con Node.js, Express y Sequelize. Permite 
         TEMPLATE=pug
         JWT_SECRET=(una clave secreta para JWT)
 
-4. Inicializar el servidor y la base de datos:
+4. En la terminal de VSCODE, inicializar el servidor y la base de datos:
 
         npm start
 
 5. Ahora para detener el servidor y poder crear los datos de ejemplo, presiona `Ctrl + C` en la     terminal.
 
-6. Para crear paciente y medico de ejemplo, ejecutar:
+6. En la terminal de VSCODE, para crear paciente y medico de ejemplo, ejecutar:
 
         npm run db:seed
 
-7. Inicializar el servidor nuevamente:
+7. En la terminal de VSCODE, inicializar el servidor nuevamente:
 
         npm start
 
