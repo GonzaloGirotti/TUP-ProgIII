@@ -8,28 +8,33 @@ Este proyecto es una API desarrollada con Node.js, Express y Sequelize. Permite 
    En una distro GNU/Linux (o utilizando WSL), abrir una terminal y ejecutar:
    
         git clone github.com/GonzaloGirotti/TUP-ProgIII 
-        cd PracticoIII 
+        cd TUP-ProgIII/PracticoIII 
         code . 
 
-    Instalar dependencias:
+2. En la terminal de VSCODE, para instalar dependencias:
 
         npm install
 
-Configurar variables de entorno ->
-Crear un archivo .env en la raíz del proyecto con el siguiente contenido:
+3. Configurar variables de entorno ->
+   Crear un archivo .env en la raíz del proyecto con el siguiente contenido:
 
-    PORT=3000
-    TEMPLATE=pug
-    JWT_SECRET=(una clave secreta para JWT)
+        PORT=3000
+        TEMPLATE=pug
+        JWT_SECRET=(una clave secreta para JWT)
 
-Crear los datos de prueba (paciente y medico) -> Abrir terminal en la raiz del proyecto (en vscode) y ejecutar:
+4. Inicializar el servidor y la base de datos:
 
-    npm run db:migrate
-    npm run db:seed
+        npm start
 
-Iniciar el servidor:
+5. Ahora para detener el servidor y poder crear los datos de ejemplo, presiona `Ctrl + C` en la     terminal.
 
-    npm start
+6. Para crear paciente y medico de ejemplo, ejecutar:
+
+        npm run db:seed
+
+7. Inicializar el servidor nuevamente:
+
+        npm start
 
 ## Endpoints del proyecto:
 
