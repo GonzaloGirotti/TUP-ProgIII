@@ -14,14 +14,14 @@ html(lang="es")
         h2 Elija una opción:
         ul.menu
             li
-                button 
-                    a(href="/api/v1/home/loginUsuario") Iniciar sesión
-            li
                 button
                     a(href=paginaRegistroTurno) Registrar Turno
             li
                 button
                     a(href=paginaListarPacientes) Ver Pacientes
+            li 
+                button
+                    a(href=paginaListarTurnos) Ver Turnos
         
         footer
             p © #{new Date().getFullYear()} Programacion III

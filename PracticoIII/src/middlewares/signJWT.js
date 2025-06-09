@@ -10,7 +10,7 @@ module.exports = function (usuario) { // Recibe usuario por parametro
         },
             globalConstants.JWT_SECRET, //clave secreta para encriptar token
             {
-                expiresIn: '3000m' // expira en 3 hs
+                expiresIn: '30m' // expira en 30 minutos
             }
         )
         return token

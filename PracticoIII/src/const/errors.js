@@ -42,5 +42,15 @@ module.exports = {
     'TurnoInexistente': {
         code: 1006,
         message: 'Turno no encontrado'
+    },
+
+    'NoHayTurnos': {
+        code: 1007,
+        message: 'No hay turnos disponibles'
+    },
+
+    'ErrorGenerandoToken': {
+        code: 1008,
+        message: 'Error al generar el token de sesión'
     }
 }

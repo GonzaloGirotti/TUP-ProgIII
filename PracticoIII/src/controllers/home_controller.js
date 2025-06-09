@@ -1,5 +1,6 @@
 const models = require('../database/models/index');
 const pacienteController = require('./paciente_controller');
+const turnosController = require('./turnos_controller');
 
 module.exports = {
 
@@ -9,7 +10,8 @@ module.exports = {
             title: 'Turnero con express',
             message: '¡Bienvenido al sistema de gestión de turnos!',
             paginaListarPacientes: '/api/v1/home/listarPacientes',
-            paginaRegistroTurno: '/api/v1/home/registroTurno'
+            paginaRegistroTurno: '/api/v1/home/registroTurno',
+            paginaListarTurnos: '/api/v1/home/listarTurnos',
             });
         } catch (error) {
             res.render('error', { 
@@ -40,10 +42,11 @@ module.exports = {
             res.render('registro_turno', { 
                 title: 'Registro de Turno',
                 message: 'Registra un nuevo turno',
-                form_action: '/api/v1/turnos/',
+                form_action: '/api/v1/turnos/crearTurnoLocal',
                 pacientes: pacientes,
                 medicos: medicos
             });
+            return;
         } catch (error) {
             res.render('error', { 
                 title: 'Error',
@@ -53,63 +56,14 @@ module.exports = {
 
     },
 
-    loginUsuario : async (req, res) => {
-        try {
-            res.render('login', { 
-                title: 'Inicio de Sesión',
-                form_action: '/auth/login'
-            });
-        } catch (error) {
-            res.render('error', { 
-                title: 'Error',
-                message: 'No se pudo cargar el formulario de inicio de sesión.'
-            });
-        }
-    },
-
     listarPacientes : async (req, res) => {
         try {
-            const pacientes = await models.paciente.findAll()
-        
-            res.render('pacientes', { 
-                title: 'Listado de Pacientes',
-                pacientes: pacientes,
-                ruta_eliminar: '/api/v1/home/eliminarPaciente/',
-                ruta_modificar: '/api/v1/home/modificarPaciente/',
-            });
-
-        } catch (error) {
-            res.render('pacientes', { 
-                title: 'Error',
-                message: 'No se pudieron listar los pacientes.'
-            });
-        }
-    },
-    
-    modificarPaciente : async (req, res) => {
-        try {
-            const paciente = await models.paciente.findOne({
-                where: { id: req.params.idPaciente }
-            })
-
-            if (!paciente) {
-                return res.status(404).render('error', { 
-                    title: 'Error',
-                    message: 'Paciente no encontrado.'
-                });
-            }
-
-            res.render('modificar_paciente', { 
-                title: 'Modificar Paciente',
-                paciente: paciente,
-                form_action: '/api/v1/pacientes/modificar/' + paciente.id,
-                ruta_pacientes: '/api/v1/home/listarPacientes',
-            });
+            await pacienteController.listar(true)(req, res);
 
         } catch (error) {
             res.render('error', { 
                 title: 'Error',
-                message: 'No se pudo modificar el paciente.'
+                message: 'No se pudieron listar los pacientes.'
             });
         }
     },
@@ -123,6 +77,38 @@ module.exports = {
                 message: 'No se pudo eliminar el paciente.'
             });
         }
-    }
+    },
 
+    eliminarTurno : async (req, res) => {
+        try {
+            turnosController.eliminarTurno(req, res);
+        } catch(error) {
+            res.render('error', { 
+                title: 'Error',
+                message: 'No se pudo eliminar el turno.'
+            });
+        }
+    },
+
+    listarTurnos : async (req, res) => {
+        try {
+            const turnos = await models.turno.findAll();
+            const pacientes = await models.paciente.findAll();
+            const medicos = await models.medico.findAll();
+
+            res.render('turnos', { 
+                title: 'Listado de Turnos',
+                turnos: turnos,
+                pacientes: pacientes,
+                medicos: medicos,
+                ruta_eliminar: '/api/v1/turnos/eliminarTurno/',
+            });
+
+        } catch (error) {
+            res.render('error', { 
+                title: 'Error',
+                message: 'No se pudieron listar los turnos.'
+            });
+        }
+    }
 }

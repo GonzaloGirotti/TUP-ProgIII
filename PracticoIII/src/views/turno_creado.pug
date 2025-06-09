@@ -1,0 +1,25 @@
+doctype html
+html(lang="es")
+    head
+        title= title
+        meta(charset="utf-8")
+        
+    include ./styles/base_styles.pug
+    include ./styles/turno_creado_styles.pug
+
+    body
+
+    div.mainContainer
+        h1= message
+        div.turnoCreado
+            p El turno ha sido creado exitosamente.
+            p ID del turno: #{turno.id}
+            p ID del paciente: #{turno.paciente_id} Nombre del paciente: #{paciente.nombre}
+            p ID del médico: #{turno.medico_id} Nombre del médico: #{medico.nombre}
+            p Fecha: #{turno.fecha}
+            p Hora: #{turno.hora}
+        button.volverButton
+            a(href="/api/v1/home") Volver al inicio
+        
+        footer
+            p © #{new Date().getFullYear()} Programacion III

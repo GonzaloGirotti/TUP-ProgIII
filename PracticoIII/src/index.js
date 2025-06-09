@@ -14,8 +14,8 @@ const configuracionMiddlewares = (app) => {
 }
 
 const configuracionRouter = (app) => {
-    app.use('/api/v1/', routerConfig.rutas_init())
-    app.use('/', routerConfig.rutas_auth())
+    app.use('/api/v1/', routerConfig.rutas_init())  // rutas iniciales
+    app.use('/', routerConfig.rutas_auth())  // rutas de autenticacion
 
     app.use(function(req,res,next){
         next(createError(404)) // si no encuentra la ruta, envia error 404
@@ -23,7 +23,7 @@ const configuracionRouter = (app) => {
     app.use(errorHandler)
 }
 
-  const engine = (app, template) => {
+  const engine = (app, template) => {  // configuracion del motor de plantillas
      try{
        require.resolve(template);
        app.set('view engine', template)

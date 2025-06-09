@@ -12,28 +12,28 @@ html(lang="es")
 
     div.mainContainer
         h1= message
+        div.pacientes_medicos_container
+            div.pacientes-container
+                h2 Pacientes Registrados
+                each paciente in pacientes
+                    div.paciente-card
+                        p ID: #{paciente.id}
+                        p Nombre: #{paciente.nombre}
+                        p Apellido: #{paciente.apellido}
+                        p Email: #{paciente.email}
+                        p Edad: #{paciente.edad}
 
-        div.pacientes-container
-            h2 Pacientes Registrados
-            each paciente in pacientes
-                div.paciente-card
-                    p ID: #{paciente.id}
-                    p Nombre: #{paciente.nombre}
-                    p Apellido: #{paciente.apellido}
-                    p Email: #{paciente.email}
-                    p Edad: #{paciente.edad}
-
-        div.medicos-container
-            h2 Medicos Disponibles
-            each medico in medicos
-                div.medico-card
-                    p ID: #{medico.id}
-                    p Nombre: #{medico.nombre}
-                    p Apellido: #{medico.apellido}
-                    p Email: #{medico.email}
-                    p Edad: #{medico.edad}
-                    p Especialidad: #{medico.especialidad}
-                    p Hospital: #{medico.hospital}
+            div.medicos-container
+                h2 Medicos Disponibles
+                each medico in medicos
+                    div.medico-card
+                        p ID: #{medico.id}
+                        p Nombre: #{medico.nombre}
+                        p Apellido: #{medico.apellido}
+                        p Email: #{medico.email}
+                        p Edad: #{medico.edad}
+                        p Especialidad: #{medico.especialidad}
+                        p Hospital: #{medico.hospital}
 
 
         div.formContainer

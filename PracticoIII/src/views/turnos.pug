@@ -1,0 +1,66 @@
+doctype html
+html(lang="es")
+    head
+        title= title
+        meta(charset="utf-8")
+
+    //- Estilos
+    include ./styles/base_styles.pug
+    include ./styles/turnos_styles.pug 
+
+    body
+
+    div.mainContainer
+        h1= message
+
+        if turnos.length === 0
+            p No hay turnos registrados.
+        else
+            h2 Lista de Turnos Registrados
+            div.tabla
+                table
+                    thead
+                        tr
+                            th ID Turno
+                            th Paciente
+                            th Medico
+                            th Fecha
+                            th Hora
+                            th Acciones
+                    tbody
+                        each turno in turnos
+                            each paciente in pacientes
+                                each medico in medicos
+                                    if turno.paciente_id === paciente.id && turno.medico_id === medico.id
+                                        tr.turnos_row
+                                            td= turno.id
+                                            td ID #{turno.paciente_id} - #{paciente.nombre} #{paciente.apellido}
+                                            td ID #{turno.medico_id} - #{medico.nombre} #{medico.apellido}
+                                            td= turno.fecha
+                                            td= turno.hora 
+                                            td.accionestd
+                                                button(onclick=`eliminarTurno(${turno.id})`) Eliminar
+
+                    
+        button.volverButton
+            a(href="/api/v1/home") Volver al inicio
+
+        footer
+            p © #{new Date().getFullYear()} Programacion III
+
+        script.
+            function eliminarTurno(id) {
+                if (confirm('¿Estás seguro de que quieres eliminar este turno?')) {
+                    fetch(`/api/v1/home/eliminarTurno/${id}`, {
+                        method: 'DELETE'
+                    })
+                    .then(res => {
+                        if (res.ok) {
+                            location.reload();
+                        } else {
+                            alert('Error al eliminar el turno');
+                        }
+                    });
+                }
+            }
+        

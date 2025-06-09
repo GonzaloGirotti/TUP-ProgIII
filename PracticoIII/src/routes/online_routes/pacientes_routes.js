@@ -3,9 +3,8 @@ const pacienteController = require('../../controllers/paciente_controller')
 const validate = require('../../middlewares/validate')
 const paciente_scheme = require('../../middlewares/schemes/paciente_scheme')
 
-router.get('/', pacienteController.listar)
-router.post('/',validate(paciente_scheme.crearPaciente), pacienteController.crear)
+router.get('/', pacienteController.listar(false))
+router.post('/', validate(paciente_scheme.crearPaciente), pacienteController.crear)
 router.get('/:idPaciente', pacienteController.listarInfo)
-router.get('/modificar/:idPaciente', pacienteController.modificar)
 
 module.exports = router
