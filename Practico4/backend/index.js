@@ -24,7 +24,7 @@ const configuracionRouter = (app) => {
      try{
        require.resolve(template);
        app.set('view engine', template)
-       app.set('views', './src/views/')
+       app.set('views', path.join(__dirname, '../frontend'));
      } catch (error) {
         console.log('Error al configurar el motor de plantillas:',template)
       }
@@ -35,7 +35,8 @@ const init = () => {
     const app = express() 
     configuracionMiddlewares(app) 
     database.connectDB() 
-    engine(app, process.env.TEMPLATE) 
+    engine(app, process.env.TEMPLATE)
+    app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
     configuracionRouter(app) 
 

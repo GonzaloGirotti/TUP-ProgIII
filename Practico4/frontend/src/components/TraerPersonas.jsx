@@ -5,7 +5,7 @@ const TraerPersonas = () => {
   const [personas, setPersonas] = useState([]);
 
   useEffect(() => {
-    const api = import.meta.env.VITE_API_URL;
+    const api = 'http://localhost:3000/api/v1';
 
     fetch(`${api}/personas`)
       .then(res => res.json())
